@@ -14,8 +14,6 @@ module.exports = function(app) {
     		// Set variables only needed for the post
         var difference = 40;
         var matchName = '';
-        var matchPhoto = '';
-
         // For-each loop to go through the data in friends.js to find a match
         friends.forEach(function(friend) {
         		// Variables for comparing matches
@@ -45,14 +43,12 @@ module.exports = function(app) {
                 difference = totalDifference;
                 // And set these variables to the appropriate friend match
                 matchName = friend.name;
-                matchPhoto = friend.photo;
             }
         });
         // Once the cycle is complete, the match with the least difference will remain,
         // and that data will be sent as a json object back to the client
         res.json({
             name: matchName,
-            photo: matchPhoto
         });
 
         // This adds the new users sent data object to friends.js
