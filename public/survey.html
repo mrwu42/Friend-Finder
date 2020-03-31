@@ -259,7 +259,7 @@
                 var currentURL = 'https://'+window.location.origin;
     
                 // AJAX post the data to the friends API. 
-                $.post(currentURL + "/api/friends", userData, function(data) {
+                $.post("/api/friends", userData, function(data) {
                         // If the data has a match, then show this
                     if (data.name !== undefined) {
                         matchStatus.html('Your match...');

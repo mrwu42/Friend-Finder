@@ -1,5 +1,5 @@
 // Dependencies
-var friends = require('../data/friends.js');
+var friends = require('../api/friends.js');
 
 // Export the function
 module.exports = function(app) {
